@@ -1,0 +1,27 @@
+/* Laboratorio. Usa i token di style.css. */
+.lab-seedrow { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.lab-seedrow .lab-seed { font-family: var(--font-mono); letter-spacing: .14em; text-transform: uppercase; width: 9.5em; text-align: center; font-size: 1rem; }
+.lab-note { background: color-mix(in srgb, var(--yellow) 18%, var(--bg-2)); color: var(--label); border-radius: var(--r-m); padding: 12px 14px; font-size: .882rem; }
+.lab-ctl { display: grid; gap: 12px; }
+.lab-ctl textarea, .lab-ctl input[type="text"] { width: 100%; min-height: 44px; }
+.lab-ctl textarea { min-height: 70px; }
+.lab-num { width: 5em; text-align: center; background: var(--fill-2) !important; border: 0 !important; border-radius: 10px !important; }
+.lab-wait { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.lab-spin { width: 20px; height: 20px; border: 2.5px solid var(--fill); border-top-color: var(--label-2); border-radius: 50%; animation: lab-rot .8s linear infinite; }
+@keyframes lab-rot { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .lab-spin { animation-duration: 3s !important; animation-iteration-count: infinite !important; } }
+.lab-listen { display: grid; gap: 10px; justify-items: center; }
+.lab-listen .say { width: 72px; height: 72px; background: var(--tint-fill); color: #fff; }
+.lab-listen .say svg { width: 32px; height: 32px; }
+.lab-add { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 8px 0; border-top: var(--hair) solid var(--sep); }
+.lab-add > span { min-width: 0; overflow-wrap: anywhere; flex: 1 1 200px; }
+.lab-status { text-align: center; font-weight: 600; min-height: 1.6em; }
+.lab-shadow .line { cursor: default; }
+.lab-shadow.hide-text .line:not(.revealed) .da > :not(.who) { visibility: hidden; }
+.lab-shadow.hide-text .line:not(.revealed) .da { position: relative; color: transparent; }
+.lab-shadow.hide-text .line:not(.revealed) .da::after { content: "• • •"; position: absolute; left: 0; top: 0; color: var(--label-2); letter-spacing: .2em; }
+.lab-shadow .line.playing { background: color-mix(in srgb, var(--tint) 12%, transparent); }
+.lab-shadow { max-width: 100%; overflow-wrap: anywhere; }
+.lab-view { display: grid; gap: 18px; min-width: 0; }
+.lab-view .drills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 420px) { .lab-view .drills { grid-template-columns: minmax(0, 1fr); } }

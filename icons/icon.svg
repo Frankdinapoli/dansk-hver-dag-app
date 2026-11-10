@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Icona originale di Dansk hver dag: un fumetto rosso con la croce nordica bianca, su fondo chiaro -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9E9EF"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF5148"/>
+      <stop offset="1" stop-color="#D40F2C"/>
+    </linearGradient>
+    <clipPath id="b">
+      <path d="M150 112h212a60 60 0 0 1 60 60v120a60 60 0 0 1-60 60H268l-74 62a8 8 0 0 1-13-6v-56h-31a60 60 0 0 1-60-60V172a60 60 0 0 1 60-60z"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <path d="M150 112h212a60 60 0 0 1 60 60v120a60 60 0 0 1-60 60H268l-74 62a8 8 0 0 1-13-6v-56h-31a60 60 0 0 1-60-60V172a60 60 0 0 1 60-60z" fill="url(#g)"/>
+  <g clip-path="url(#b)" fill="#fff">
+    <rect x="192" y="100" width="38" height="252"/>
+    <rect x="80" y="213" width="360" height="38"/>
+  </g>
+</svg>

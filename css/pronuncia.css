@@ -1,0 +1,46 @@
+/* Scheda «Pronuncia». Usa le variabili del design system con ripiego sui colori storici. */
+.pr { min-width: 0; }
+.pr * { min-width: 0; }
+.pr-seg { display: flex; gap: 8px; flex-wrap: wrap; }
+.pr-seg .chip { min-height: 44px; padding-inline: 18px; font-size: .95rem; }
+.pr-card { display: grid; gap: 14px; }
+.pr-phrase { font-size: 1.5rem; line-height: 1.35; overflow-wrap: anywhere; }
+.pr-it { font-size: 1rem; }
+.pr-listen .btn, .pr-nav .btn, .pr .cta-row .btn { min-height: 44px; }
+.pr-micwrap { display: grid; justify-items: center; gap: 8px; }
+.pr-mic {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  width: 100%; max-width: 420px; min-height: 72px; padding: 14px 20px;
+  border-radius: var(--r-xl, 24px); border: 2px solid var(--tint, var(--accent));
+  background: var(--fill, var(--accent-soft)); color: var(--tint, var(--accent));
+  font: inherit; font-weight: 600; font-size: 1.05rem; cursor: pointer;
+  touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+}
+.pr-mic:active { transform: scale(.98); }
+.pr-mic-dot { width: 16px; height: 16px; border-radius: 50%; background: currentColor; flex: none; }
+.pr-mic.on { background: var(--red, var(--bad)); border-color: var(--red, var(--bad)); color: #fff; }
+.pr-mic.on .pr-mic-dot { background: #fff; animation: pr-pulse 1s ease-in-out infinite; }
+@keyframes pr-pulse { 50% { transform: scale(1.5); opacity: .6; } }
+@media (prefers-reduced-motion: reduce) { .pr-mic.on .pr-mic-dot { animation: none; } }
+.pr-heard { min-height: 1.4em; text-align: center; overflow-wrap: anywhere; }
+.pr-type { width: 100%; box-sizing: border-box; min-height: 64px; padding: 12px; font: inherit; font-size: 1rem; border-radius: var(--r-m, 10px); border: 1px solid var(--sep, var(--line)); background: var(--bg, var(--surface)); color: inherit; resize: vertical; }
+.pr-result { display: grid; gap: 10px; }
+.pr-score { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-weight: 600; }
+.pr-pct { font-size: 1.8rem; font-weight: 700; color: var(--tint, var(--accent)); }
+.pr-heard-box { padding: 10px 12px; border-radius: var(--r-m, 10px); background: var(--fill, var(--surface-2)); overflow-wrap: anywhere; }
+.pr-words { display: flex; flex-wrap: wrap; gap: 6px; }
+.pr-w { padding: 4px 10px; border-radius: 999px; font-size: 1rem; overflow-wrap: anywhere; }
+.pr-ok { background: var(--good-soft); color: var(--green, var(--good)); }
+.pr-near { background: var(--warn-soft); color: var(--orange, var(--warn)); }
+.pr-miss { background: var(--bad-soft); color: var(--red, var(--bad)); text-decoration: underline wavy; text-underline-offset: 3px; }
+.pr-extra { background: var(--accent-soft); color: var(--tint, var(--accent)); font-style: italic; }
+.pr-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.pr-hints { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.pr-tip { border-left: 3px solid var(--tint, var(--accent)); padding: 4px 0 4px 12px; }
+.pr-tip p, .pr-tipcard p { margin: 4px 0 8px; }
+.pr-ex { display: flex; flex-wrap: wrap; gap: 8px; }
+.pr-exi { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 2px 6px 2px 12px; border-radius: 999px; background: var(--fill, var(--surface-2)); }
+.pr-exi .say { min-width: 44px; min-height: 44px; }
+.pr-disc { margin: 0; }
+.pr-err { color: var(--red, var(--bad)); }
+.pr-tipcard { display: grid; gap: 4px; }
